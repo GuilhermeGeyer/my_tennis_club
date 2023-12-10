@@ -8,5 +8,15 @@
 
 <p>In views.py you can see what the fruits variable looks like.</p>
 
+{% with lastname="Tobias" %}
+<h1>Hello {{ firstname }} {{ lastname }}. How are you?</h1>
+{% endwith %}
+
+<ul>
+  {% for member in mymembers %}
+    <li>{{ member.firstname }}</li>
+  {% endfor %}
+</ul>
+
 </body>
 </html>
