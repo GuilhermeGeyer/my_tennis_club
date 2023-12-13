@@ -33,5 +33,6 @@ def testing(request):
         'fruits': ['Apple', 'Banana', 'Cherry'],
         'firstname': 'Linus',
         'mymembers': mymembers,
+        'greetings': 1,
     }
     return HttpResponse(template.render(context, request))

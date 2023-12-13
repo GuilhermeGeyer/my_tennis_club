@@ -2,6 +2,8 @@
 <html>
 <body>
 
+<p><a href='/'>HOME</a></p>
+
 {% for x in fruits %}
   <h1>{{ x }}</h1>
 {% endfor %}
@@ -17,6 +19,12 @@
     <li>{{ member.firstname }}</li>
   {% endfor %}
 </ul>
+
+{% if greetings %}
+    <h2>Hello</h2>
+{% else %}
+    <h2>Bye</h2>
+{% endif %}
 
 </body>
 </html>
