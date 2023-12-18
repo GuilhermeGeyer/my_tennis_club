@@ -27,12 +27,16 @@ def main(request):
 
 
 def testing(request):
-    mymembers = Member.objects.all().values()
+    mymembers = Member.objects.all()  # .values()
+    firstnames = Member.objects.values_list('firstname')
+    emil_data = Member.objects.filter(firstname='Emil').values()
     template = loader.get_template('template.html')
     context = {
         'fruits': ['Apple', 'Banana', 'Cherry'],
         'firstname': 'Linus',
         'mymembers': mymembers,
+        'firstnames': firstnames,
+        'emil_data': emil_data,
         'greetings': 1,
     }
     return HttpResponse(template.render(context, request))
