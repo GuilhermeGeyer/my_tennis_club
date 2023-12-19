@@ -1,0 +1,12 @@
+<table border=1>
+<tr>
+<th>ID</th>
+<th>Fist name</th>
+</tr>
+{% for member in mymembers %}
+<tr>
+<td>{{ member.id }}</td>
+<td>{{ member.firstname }}</td>
+</tr>
+{% endfor %}
+</table>

@@ -2,6 +2,9 @@
 <html>
 <body>
 
+{% load static %}
+<link rel="stylesheet" href="{% static 'myfirst.css' %}">
+
 <!--<p><a href='/'>HOME</a></p>-->
 
 {% include "menu.html" with me="TOBIAS" sponsor="W3SCHOOLS" %}
@@ -16,11 +19,16 @@
 <h1>Hello {{ firstname }} {{ lastname }}. How are you?</h1>
 {% endwith %}
 
+<!--
 <div>{{ mymembers }}</div>
 <div>{{ firstnames }}</div>
 <div>{{ emil_data }}</div>
+<div>{{ data_2 }}</div>
+-->
+{% include "table_id_firstname_lastname.html" with mymembers=data_2 %}
 <p></p>
 
+<!--
 <table border=1>
 <tr>
 <th>ID</th>
@@ -33,6 +41,9 @@
 </tr>
 {% endfor %}
 </table>
+-->
+{% include "table_id_firstname_lastname.html" with mymembers=mymembers %}
+<p></p>
 
 <ul>
   {% for member in mymembers %}
